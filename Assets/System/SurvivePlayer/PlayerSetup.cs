@@ -14,7 +14,7 @@ public class PlayerSetup : MonoBehaviour
 
         stats = GetComponent<PlayerStats>();
         stats.Add(new KeyValuePair<string, PlayerStat>("Magic",new PlayerStat("Magic","How much magical energy you have",100,100)));
-        stats.Add(new KeyValuePair<string, PlayerStat>("Hunger", new PlayerStat("Hunger", "How much food you have eatin", 20,20)));
+        stats.Add(new KeyValuePair<string, PlayerStat>("Hunger", new PlayerStat("Hunger", "How much food you have eatin", 100,100)));
         stats.Add(new KeyValuePair<string, PlayerStat>("Thirst", new PlayerStat("Thirst", "how much water you have drank", 100,100)));
         stats.Add(new KeyValuePair<string, PlayerStat>("Blood", new PlayerStat("Blood", "How much blood is in the body", 100,100)));
 

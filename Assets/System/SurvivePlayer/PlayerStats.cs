@@ -22,9 +22,13 @@ public class PlayerStats : MonoBehaviour , ICollection<KeyValuePair<string,Playe
     public PlayerStat this[string key] { get { return playerStats[key]; } }
 
 
+
+
+
     #region MonoBehaviour
 
     // Start is called before the first frame update
+    
     void Start()
     {
 
@@ -128,7 +132,7 @@ public class PlayerStat
     /// fired when the magnitude changes
     /// </summary>
     public event EventHandler<MagnitudeChangedEventArgs> MagnitudeChanged;
-    
+    void OnMagnitudeChanged(MagnitudeChangedEventArgs e) { if (MagnitudeChanged != null) MagnitudeChanged(this, e); }
 
 
     /// <summary>
@@ -164,7 +168,7 @@ public class PlayerStat
             tempMag = 0;
         }
 
-        MagnitudeChanged(this,new MagnitudeChangedEventArgs(Magnitude,amount));
+        OnMagnitudeChanged(new MagnitudeChangedEventArgs(Magnitude,amount));
 
     }
     //overload + operator

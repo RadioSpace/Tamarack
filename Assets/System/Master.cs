@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Master : MonoBehaviour
 {
     public float ThristDecayRate = 0.001157407f;
-    public float HungerDecayRate = ;
+    public float HungerDecayRate = .0000156f;
 
 
 

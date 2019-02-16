@@ -51,6 +51,8 @@ public class StatBarDataBinding : MonoBehaviour
 
     private void Stat_MagnitudeChanged(object sender, MagnitudeChangedEventArgs e)
     {
+        
+
         if (stat.Magnitude > 0)
         {
             bar.value = stat.MaxMagnitude / stat.Magnitude;

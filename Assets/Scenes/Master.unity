@@ -141,6 +141,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19ea5f790e1ff534d828344a3bde8fcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ThristDecayRate: 0.005787037
+  HungerDecayRate: 0
 --- !u!4 &670062320
 Transform:
   m_ObjectHideFlags: 0
