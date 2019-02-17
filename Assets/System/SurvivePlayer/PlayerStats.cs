@@ -6,6 +6,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 [Serializable]
 public class PlayerStats : MonoBehaviour , ICollection<KeyValuePair<string,PlayerStat>>
 {
@@ -61,11 +63,19 @@ public class PlayerStats : MonoBehaviour , ICollection<KeyValuePair<string,Playe
         }
     }
 
+    /// <summary>
+    /// clears all stats
+    /// </summary>
     public void Clear()
     {
         playerStats.Clear();
     }
 
+    /// <summary>
+    /// checks the list for a matching KeyValuePair
+    /// </summary>
+    /// <param name="item"></param>
+    /// <returns></returns>
     public bool Contains(KeyValuePair<string, PlayerStat> item)
     {
         return playerStats.ContainsKey(item.Key) && playerStats.ContainsValue(item.Value);

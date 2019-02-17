@@ -6,11 +6,18 @@ public class PlayerSetup : MonoBehaviour
 {
 
     PlayerStats stats;
+    
+
+
 
     // Start is called before the first frame update
     void Start()
     {
+
+        DataRetriever Database = GameObject.Find("GameLevel").GetComponent<DataRetriever>();
         
+
+
 
         stats = GetComponent<PlayerStats>();
         stats.Add(new KeyValuePair<string, PlayerStat>("Magic",new PlayerStat("Magic","How much magical energy you have",100,100)));
