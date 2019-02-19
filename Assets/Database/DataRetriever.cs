@@ -25,7 +25,7 @@ public class DataRetriever : MonoBehaviour
     
     static SqliteDataAdapter ItemAdapter;
     static SqliteDataAdapter PlayerAdapter;
-    static SqliteDataAdapter PlayerItemAdapterAdapter;
+    static SqliteDataAdapter PlayerItemAdapter;
 
     static void StartDatabase()
     {
@@ -57,16 +57,8 @@ public class DataRetriever : MonoBehaviour
         ItemAdapter = new SqliteDataAdapter(Itemcommand);
         ItemAdapter.Fill(data, "Item");
 
-
-        foreach (DataTable Table in data.Tables)
-        {
-            print($"TABLE NAME : {Table.TableName}  ###################################");
-
-            foreach (DataRow row in Table.Rows)
-            {
-                print($"{row["name"]}");
-            }
-        }
+        
+        
     }
 
     // Start is called before the first frame update
@@ -80,7 +72,7 @@ public class DataRetriever : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
 
@@ -92,5 +84,7 @@ public class DataRetriever : MonoBehaviour
         
 
     }
+
+
 }
 
